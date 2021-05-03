@@ -22,7 +22,7 @@ public class AppConfig {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
-    public DiscountPolicy discountPolicy() {
+    private DiscountPolicy discountPolicy() {
         return new FixDiscountPolicy();
     }
 }
