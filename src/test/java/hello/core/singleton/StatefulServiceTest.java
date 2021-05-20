@@ -25,6 +25,7 @@ class StatefulServiceTest {
         int price = statefulService1.getPrice();
         System.out.println("price = " + price);
 
+        // 클래스를 상태 유지하게 만들었기 때문에 사용자A의 주문금액이 20000원이 되어버림
         Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
 
     }
