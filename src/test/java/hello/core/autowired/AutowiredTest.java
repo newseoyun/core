@@ -32,5 +32,6 @@ public class AutowiredTest {
         public void setNoNean3(Optional<Member> noNean3) {
             System.out.println("noNean3 = " + noNean3);
         }
+
     }
 }
