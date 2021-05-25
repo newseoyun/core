@@ -18,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
 /*
     Lombok @RequiredArgsConstructor 적용: final 필드를 모아서 생성자를 자동으로 만들어준다.
 
-    // 생성자 주입을 사용할 것. 수정자 주입 필요시 같이 사용. @Autowired 생략가능
+    // 생성자 주입을 사용할 것. 수정자 주입 필요시 같이 사용가능. 생성자가 하나이기 때문에 @Autowired 생략가능
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
