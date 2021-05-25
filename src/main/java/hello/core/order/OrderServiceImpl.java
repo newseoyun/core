@@ -4,20 +4,25 @@ import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+/*
+    Lombok @RequiredArgsConstructor 적용: final 필드를 모아서 생성자를 자동으로 만들어준다.
+
     // 생성자 주입을 사용할 것. 수정자 주입 필요시 같이 사용. @Autowired 생략가능
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
-    }
+    }*/
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
