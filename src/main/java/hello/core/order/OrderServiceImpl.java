@@ -14,8 +14,8 @@ public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
-    // @Autowired 시 빈이 중복될 경우 파라미터 이름으로도 매핑을 해준다.
-    // private final DiscountPolicy rateDiscountPolicy; 하면 rateDiscountPolicy 주입해줌.
+    // @Autowired 시 타입 매칭이 먼저고 그 다음 파라미터 이름으로도 매칭을 해준다.
+    // 빈 중복 시 private final DiscountPolicy rateDiscountPolicy; 하면 rateDiscountPolicy 주입해줌.
 
 
 /*
