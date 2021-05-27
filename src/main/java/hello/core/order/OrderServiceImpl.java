@@ -14,6 +14,9 @@ public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+    // @Autowired 시 빈이 중복될 경우 파라미터 이름으로도 매핑을 해준다.
+    // private final DiscountPolicy rateDiscountPolicy; 하면 rateDiscountPolicy 주입해줌.
+
 
 /*
     Lombok @RequiredArgsConstructor 적용: final 필드를 모아서 생성자를 자동으로 만들어준다.
