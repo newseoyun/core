@@ -18,7 +18,6 @@ public class OrderServiceImpl implements OrderService {
     // 빈 중복 시 private final DiscountPolicy rateDiscountPolicy; 하면 rateDiscountPolicy 주입해줌.
     // 지금은 RateDiscountPolicy 에 직접만든 Qualifier > MainDiscountPolicy 어노테이션을 붙여준 상태.
 
-
 /*
     Lombok @RequiredArgsConstructor 적용: final 필드를 모아서 생성자를 자동으로 만들어준다.
 
@@ -36,13 +35,13 @@ public class OrderServiceImpl implements OrderService {
         this.discountPolicy = discountPolicy;
     }
 
+    // 수정자 주입
     @Autowired
     public DiscountPolicy setDiscountPolicy(@MainDiscountPolicy DiscountPolicy discountPolicy) {
         return discountPolicy;
     }
 
 */
-
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
