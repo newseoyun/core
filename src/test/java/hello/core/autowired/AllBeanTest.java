@@ -14,13 +14,16 @@ public class AllBeanTest {
         new AnnotationConfigApplicationContext();
     }
 
-    static class DiscoundService {
+    static class DiscountService {
         private final Map<String, DiscountPolicy> policyMap;
         private final List<DiscountPolicy> policies;
 
-        public DiscoundService(Map<String, DiscountPolicy> policyMap, List<DiscountPolicy> policies) {
+        public DiscountService(Map<String, DiscountPolicy> policyMap, List<DiscountPolicy> policies) {
             this.policyMap = policyMap;
             this.policies = policies;
+
+            System.out.println("policyMap = " + policyMap);
+            System.out.println("policies = " + policies);
         }
     }
 }
