@@ -3,7 +3,7 @@ package hello.core.lifecycle;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class NetworkClient implements InitializingBean, DisposableBean {
+public class NetworkClient {
 
     private String url;
 
@@ -29,8 +29,8 @@ public class NetworkClient implements InitializingBean, DisposableBean {
         System.out.println("close: " + url);
     }
 
-
-    // InitializingBean, DisposableBean : 초기화, 소멸 인터페이스. 잘 안씀.
+    /*
+    // implements InitializingBean, DisposableBean : 초기화, 소멸 인터페이스. 거의 안씀. 생명주기 이해를 위한 테스트.
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("NetworkClient.afterPropertiesSet");
@@ -43,4 +43,18 @@ public class NetworkClient implements InitializingBean, DisposableBean {
         System.out.println("NetworkClient.destroy");
         disconnect();
     }
+    */
+
+    public void init() throws Exception {
+        System.out.println("=== init ===");
+        connect();
+        call("초기화 연결 메시지");
+    }
+
+    public void close() throws Exception {
+        System.out.println("=== close ===");
+        disconnect();
+    }
+
+
 }
