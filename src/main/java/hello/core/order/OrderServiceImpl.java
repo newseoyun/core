@@ -41,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
     public DiscountPolicy setDiscountPolicy(@MainDiscountPolicy DiscountPolicy discountPolicy) {
         return discountPolicy;
     }
-
 */
 
     public OrderServiceImpl(MemberRepository memberRepository,
