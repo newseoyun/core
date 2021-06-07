@@ -23,7 +23,7 @@ public class PrototypeTest {
         System.out.println("prototypeBean2 = " + prototypeBean2);
         assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
 
-        ac.close();
+        ac.close(); // prototype bean 은 destroy 호출안됨. 클라이언트가 종료메서드를 호출해줘야한다.
     }
 
     @Scope("prototype")
