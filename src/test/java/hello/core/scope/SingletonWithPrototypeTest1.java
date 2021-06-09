@@ -69,6 +69,9 @@ public class SingletonWithPrototypeTest1 {
         @Autowired
         private ObjectProvider<PrototypeBean> prototypeBeanProvider;
 
+        // 위와 같은 기능을 제공하는 외부 자바 표준 라이브러리 (gradle 추가 => implementation 'javax.inject:javax.inject:1')
+        // private Provider<PrototypeBean> prototypeBeanProvider;
+
         public int logic() {
             PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
             prototypeBean.addCount();
