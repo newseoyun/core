@@ -65,7 +65,7 @@ public class SingletonWithPrototypeTest1 {
     static class ClientBean {
 
         // DL (Dependency Lookup)
-        // 스프링 컨테이너 대신에 의존관계를 찾아주는 기능을 제공함. getObject() 로 항상 새로운 빈 생성.
+        // 스프링 컨테이너 대신에 의존관계를 찾아주는 기능을 제공함. 호출 시점에 getObject() 로 항상 새로운 빈 생성.
         @Autowired
         private ObjectProvider<PrototypeBean> prototypeBeanProvider;
 
